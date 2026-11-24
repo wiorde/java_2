@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Task2 {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
@@ -11,16 +10,11 @@ public class Task2 {
         int sign=-1;
         for (int i=1; i<=n; i++) {
             double power=1;
-            for (int j=1; j<=2*i; j++) {
-                power=power*x;
-            }
+            for (int j=1; j<=2*i; j++) {power=power*x;}
             long fact=1;
-            for (int j=1; j<=2*i; j++) {
-                fact=fact*j;
-            }
+            for (int j=1; j<=2*i; j++) {fact=fact*j; }
             sum=sum+sign*power/fact;
-            sign=-sign;
-        }
+            sign=-sign;}
         System.out.println("cos("+x+") = "+sum);
     }
 }
